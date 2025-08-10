@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="de" class="no-js">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IT Service2 – Level1 IT-Dienstleistungen</title>
+  <meta name="description" content="Level1 IT-Services: Installation, Helpdesk, Beratung, Vor-Ort, Schulung. Schnell, klar, zuverlässig." />
+  <link rel="stylesheet" href="./styles.css" />
+  <script>document.documentElement.classList.remove('no-js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+  <header class="site-header">
+    <div class="container header-wrap">
+      <a class="brand" href="#" aria-label="IT Service2">
+        <svg class="logo" width="32" height="32" viewBox="0 0 24 24" aria-hidden="true">
+          <rect width="24" height="24" rx="6" fill="currentColor"></rect>
+          <path d="M7 7h2v10H7zm4 0h6v2h-4v2h3v2h-3v4h-2z" fill="#fff"></path>
+        </svg>
+        <span class="brand-name">IT Service2</span>
+      </a>
+      <nav class="nav">
+        <button class="burger" id="burger" aria-controls="navMenu" aria-expanded="false" aria-label="Menü öffnen">☰</button>
+        <ul id="navMenu" class="nav__menu">
+          <li><a href="#t1">1. Installation</a></li>
+          <li><a href="#t2">2. Helpdesk</a></li>
+          <li><a href="#t3">3. Beratung</a></li>
+          <li><a href="#t4">4. Vor-Ort</a></li>
+          <li><a href="#t5">5. Schulung</a></li>
+          <li><a class="btn btn--small" href="#contact">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <h1>Level1 IT-Dienstleistungen – schnell, klar, zuverlässig.</h1>
+        <p>Wir unterstützen KMU bei Installation, Support und Beratung – auf Deutsch, Englisch und Französisch.</p>
+        <a class="btn" href="#contact">Jetzt anfragen</a>
+      </div>
+    </section>
+
+    <section id="t1" class="section">
+      <div class="container">
+        <h2>1) Peripherie-Installation</h2>
+        <div class="grid">
+          <article class="card"><h3>Drucker & Scanner</h3><p>LAN/WLAN, Treiber, Freigaben, Tests.</p></article>
+          <article class="card"><h3>Arbeitsplätze</h3><p>Monitore, Docking, Peripherie, Updates.</p></article>
+          <article class="card"><h3>Netzwerk & WLAN</h3><p>Switch/AP, VLAN-Basics, WPA3.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="t2" class="section alt">
+      <div class="container">
+        <h2>2) IT-Helpdesk</h2>
+        <ul class="list">
+          <li>Remote-Support (Windows, macOS, Linux)</li>
+          <li>Backup-Prüfung & Wiederherstellung</li>
+          <li>E-Mail/Office, Benutzerverwaltung</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="t3" class="section">
+      <div class="container">
+        <h2>3) Beratung</h2>
+        <div class="grid two">
+          <article class="card"><h3>IT-Sicherheit</h3><p>Grundschutz, Patches, Passwörter, 2FA.</p></article>
+          <article class="card"><h3>Modernisierung</h3><p>Cloud, Automatisierung, Monitoring, Kosten.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="t4" class="section alt">
+      <div class="container">
+        <h2>4) Vor-Ort-Service</h2>
+        <p>Hardware-Tausch, Inbetriebnahme, Fehleranalyse, kurze Reaktionszeiten in deiner Region.</p>
+      </div>
+    </section>
+
+    <section id="t5" class="section">
+      <div class="container">
+        <h2>5) Schulung & Onboarding</h2>
+        <p>Einführung für Teams, Best Practices, kurze Trainings (Security, M365, Gerätehandhabung).</p>
+      </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="contact" class="section alt">
+      <div class="container">
+        <h2>Kontakt</h2>
+        <form id="contactForm" class="form" novalidate>
+          <!-- Honeypot -->
+          <div class="hp-wrap" aria-hidden="true">
+            <label>Homepage
+              <input type="text" name="hp" tabindex="-1" autocomplete="off" />
+            </label>
+          </div>
+          <!-- Timestamp -->
+          <input type="hidden" name="ts" id="ts" value="" />
+
+          <label> Name
+            <input type="text" name="name" placeholder="Ihr Name" required />
+          </label>
+          <label> E-Mail
+            <input type="email" name="email" placeholder="you@example.com" required />
+          </label>
+          <label> Nachricht
+            <textarea name="message" rows="5" placeholder="Wobei können wir helfen?" required></textarea>
+          </label>
+          <button class="btn" type="submit">Senden</button>
+          <p id="formMsg" class="form-msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> IT Service2 • Berlin</p>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
