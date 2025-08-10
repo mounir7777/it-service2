@@ -59,10 +59,13 @@
         });
         const json = await res.json().catch(() => ({}));
         if (res.ok && json.ok) {
-          form.reset();
-          if (tsField) tsField.value = String(Date.now());
-          setMsg('Danke! Ihre Nachricht wurde gesendet.', true);
-        } else {
+  form.reset();
+        if (tsField) tsField.value = String(Date.now());
+            window.location.href = '/success';   // << Redirect
+         } else {
+  setMsg(json.message || 'Senden fehlgeschlagen – bitte später erneut.');
+}
+         else {
           setMsg(json.message || 'Senden fehlgeschlagen – bitte später erneut.');
         }
       } catch {
