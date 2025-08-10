@@ -5,6 +5,10 @@ const path = require('path');
 const nodemailer = require('nodemailer');
 
 const app = express();
+// ganz oben nach app = express();
+app.get('/healthz', (_req, res) => res.type('text').send('OK'));
+app.listen(PORT, '0.0.0.0', () => console.log(`Server läuft auf :${PORT}`));
+
 const PORT = process.env.PORT || 3000;
 
 // ---- Static Frontend (liegt in api/public) ----
@@ -105,7 +109,3 @@ IT Service2`,
   }
 });
 
-// Healthcheck
-app.get('/healthz', (_req, res) => res.json({ ok: true }));
-
-app.listen(PORT, () => console.log(`Server läuft auf :${PORT}`));
